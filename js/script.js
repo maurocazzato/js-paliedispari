@@ -4,20 +4,21 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // Chiedere all’utente di inserire una parola
-const parola = prompt("scrivi una parola");
-const controllo = palindroma(parola);
-console.log(controllo);
+const word = prompt("scrivi una parola");
+
+const wordcheck = palindroma(word);
+console.log(wordcheck);
 
 // ribalto la parola con la funzione e controllo.....
 function palindroma() {
-  const parolainv = parola.split("").reverse().join("");
+  const wordinv = word.split("").reverse().join("");
 // ....se la parola scelta dall'utente è uguale alla parola girata allora è palindroma
-  if (parola == parolainv) {
-    return parola + " è palindroma";
+  if (word == wordinv) {
+    return word + " è palindroma";
   }
 // ....se la parola è diversa da quella girata allora non lo è
   else {
-    return parola + " non è palindroma";
+    return word + " non è palindroma";
   }
 }
 
